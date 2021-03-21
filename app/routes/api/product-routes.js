@@ -31,7 +31,7 @@ router.get('/:id', async(req, res) => {
         });
 
         if (!prodUpdate) {
-            res.status(404).json({ message: 'This product ID does not exist.' });
+            res.status(404).json({ message: 'There is no product with this ID.' });
             return;
         }
 

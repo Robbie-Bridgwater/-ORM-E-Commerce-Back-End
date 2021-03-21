@@ -21,7 +21,7 @@ router.get('/:id', async(req, res) => {
         });
 
         if (!catUpdate) {
-            res.status(404).json({ message: 'This category ID does not exist.' });
+            res.status(404).json({ message: 'There is no category with this ID.' });
             return;
         }
 
@@ -50,7 +50,7 @@ router.put('/:id', async(req, res) => {
         })
 
         if (!catUpdate) {
-            res.status(404).json({ message: 'No category found with this id!' });
+            res.status(404).json({ message: 'There is no category with this ID.' });
             return;
         }
         res.status(200).json(catUpdate);
@@ -68,7 +68,7 @@ router.delete('/:id', async(req, res) => {
         });
 
         if (!catUpdate) {
-            res.status(404).json({ message: 'No category found with this id!' });
+            res.status(404).json({ message: 'There is no category with this ID.' });
             return;
         }
 
